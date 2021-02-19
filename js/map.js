@@ -7,7 +7,7 @@ setTimeout(function(){
   function getYaMap(){
     ymaps.ready(function () {
       var myMap = new ymaps.Map('map', {
-              center: [54.727573,55.937067],
+              center: [54.745408,55.996998],
               zoom: 13
           }, {
               searchControlProvider: 'yandex#search'
@@ -15,7 +15,7 @@ setTimeout(function(){
   
   
           myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-              hintContent: 'г. Уфа, ул. Коммунистическая, д. 40, кв. 106',
+              hintContent: 'г. Уфа, ул. Комсомольская, д. 25',
               // balloonContent: 'Это красивая метка'
           }, {
               // Опции.

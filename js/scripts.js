@@ -1,7 +1,5 @@
 $('[type="checkbox"]').on('click', function() {
-
     var $this = $(this);
-
     $($this).closest('label').toggleClass('active');
 
 });
@@ -34,11 +32,13 @@ $('.header__toggler').click(function(){
 })
 
 
+$(function () {
+    $('input[name="phone"]').mask("9 (999) 999-9999");
+  });
 
 
   function windowSize(){
     if ($(window).width() <= '768'){
-  
       $('.w-gallery__list').slick({
         slidesToShow: 4,
           responsive: [
@@ -104,3 +104,37 @@ $('.header__toggler').click(function(){
 }
 
 $(window).on('load resize',windowSize);
+
+
+$(document).ready(function () {
+    $("#free-form").submit(function () {
+      $("#free-form button").prop("disabled", true).css({
+        "background-color": "#b6b6b6",
+        "color": "#FFF"
+      }).text("Ждите...");
+      $.ajax({
+        type: "POST",
+        url: "/send.php",
+        data: $(this).serialize()
+      }).done(function () {
+        // yaCounter53745795.reachGoal('ORDER2');
+        $('#free-form').html("<div style='font-size:24px; text-align:center; width: 100%; color:#000;'>Спасибо! Мы свяжемся с вами для вручения бесплатного образца");
+      });
+      return false;
+    });
+    $("#contact-form").submit(function () {
+        $("#contact-form button").prop("disabled", true).css({
+          "background-color": "#b6b6b6",
+          "color": "#FFF"
+        }).text("Ждите...");
+        $.ajax({
+          type: "POST",
+          url: "/send.php",
+          data: $(this).serialize()
+        }).done(function () {
+          // yaCounter53745795.reachGoal('ORDER2');
+          $('#contact-form').html("<div style='font-size:24px;  margin-top:10px; color:#fff;'>Спасибо!<br> Мы свяжемся с вами для передачи коммерческого предложения");
+        });
+        return false;
+      });
+})

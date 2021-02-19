@@ -60,7 +60,10 @@ img {
     background-size: cover;
     height: 666px;
     padding-top: 140px;
-    @media (max-width:768px) {
+    @media (max-width:968px) {    
+        height: 466px;
+        padding-top: 50px;}
+    @media (max-width:668px) {
         background: url(../img/section-1/bg-mob.jpg) no-repeat center;
         background-size: cover;
         padding-top: 32px;
@@ -75,9 +78,18 @@ img {
         font-size: 48px;
         line-height: 59px;
         margin: 0px;
-        @media (max-width:768px) {
+        @media (max-width:968px) {
+            font-size: 34px;
+            line-height: 39px;
+         }
+        @media (max-width:668px) {
             font-size: 24px;
             line-height: 29px;
+         }
+         @media (max-width:360px) {
+            br {
+                display: none;
+            }
          }
     }
 }
@@ -254,7 +266,7 @@ nav {
 }
 .section-1__list-feature {
     margin-top: 70px;
-    @media (max-width:768px) { 
+    @media (max-width:668px) { 
         display: block;
         margin-top: 28px;
     }
@@ -263,7 +275,7 @@ nav {
     width: 30%;
     text-align: center;
     color: #fff;
-    @media (max-width:768px) {
+    @media (max-width:668px) {
         width: 100%;
         margin-bottom: 30px;
         &:last-child {
@@ -299,7 +311,7 @@ nav {
     .title {
         color:#fff;
     }
-    @media (max-width:768px) {
+    @media (max-width:668px) {
         padding-top: 30px;
         padding-bottom: 30px;
        
@@ -410,6 +422,9 @@ nav {
         @media (max-width:768px){
             position: relative;
             z-index: 2;
+        }
+        @media (max-width:360px){ 
+            padding: 22px 83px 22px 38px;
         }
     }
     .kwiz-peoples {
@@ -583,7 +598,7 @@ label.j-checkbox {
 
 .fabrica__row-1 {
     margin-top: 51px;
-    @media (max-width:768px) {
+    @media (max-width:668px) {
         margin-top: 35px;
         img {
             max-width: 100%;
@@ -604,20 +619,45 @@ label.j-checkbox {
     }
     .fabrica__text {
         max-width: 242px;
+        @media (min-width:669px) and (max-width:1186px) {
+            width: 24%;
+            margin-bottom: 20px;
+        }
+    }
+    .fabrica__img {
+        @media (min-width:669px) and (max-width:1186px) {
+            width: 48%;
+        }
     }
 }
 
 .fabrica__row-2 {
-    @media (max-width:768px) {
+    @media (max-width:668px) {
         flex-wrap: wrap;
         img {
             max-width: 100%;
         }
     }
+    .fabrica__img {
+        @media (min-width:669px) and (max-width:1186px) {
+            width: 48%;
+        }
+    }
+    .fabrica__col {
+        @media (min-width:669px) and (max-width:1186px) {
+            width: 48%;
+            .fabrica__text {
+                max-width: 300px;
+            }
+            .fabrica__img { 
+                width: 100%;
+            }
+        }
+    }
 }
 
 .fabrica__text {
-    @media (max-width:768px) {
+    @media (max-width:968px) {
         max-width: 270px;
     }
     h4 {
@@ -626,7 +666,7 @@ label.j-checkbox {
         line-height: 22px;        
         color: #393C47;
         margin: 0px 0px 34px 0px;
-        @media (max-width:768px) {
+        @media (max-width:968px) {
             margin: 0px 0px 10px 0px;
         }
         &::before {
@@ -645,7 +685,7 @@ label.j-checkbox {
         line-height: 20px;
         color: #393C47;
         margin: 34px 0px 0px 0px;
-        @media (max-width:768px) {
+        @media (max-width:968px) {
             margin: 10px 0px 0px 0px;
         }
     }
@@ -663,6 +703,10 @@ label.j-checkbox {
     max-width: 590px;
     margin-bottom: 53px;
     float: right;
+    @media (min-width:669px) and (max-width:1186px) {
+        float: none;
+        display: block;
+    }
     @media (max-width:768px) {
         display: block;
         float: none;
@@ -672,6 +716,9 @@ label.j-checkbox {
     .fabrica__text {
         &:first-child {
             margin-right: 90px;
+            @media (min-width:669px) and (max-width:1186px) {
+                margin-bottom: 35px;
+            }
             @media (max-width:768px) {
                 margin-right: auto;
                 margin-bottom: 30px;
@@ -683,7 +730,7 @@ label.j-checkbox {
 .section-5 {
     background: url(../img/section-5/bg.png) no-repeat 100% 100% #393C47;
     padding: 72px 0px;
-    @media (max-width:768px) {
+    @media (max-width:668px) {
         padding: 30px 0px;
         background: url(../img/section-5/bg.png) no-repeat 50% 100% #393C47;
     }
@@ -758,7 +805,7 @@ label.j-checkbox {
 .video__container {
     border: 1px dashed #FFFFFF;
     margin: 46px 0px;
-    @media (max-width:768px) {
+    @media (max-width:668px) {
         margin: 20px 0px;
     }
 }
@@ -768,7 +815,10 @@ label.j-checkbox {
     justify-content: center;
     margin: 33px 0px;
     position: relative;
-    @media (max-width:768px) {
+    @media (max-width:1200px) {
+        margin: 33px 50px;
+    }
+    @media (max-width:668px) {
         margin: 18px 10px;
     }
     img {
@@ -893,7 +943,7 @@ label.j-checkbox {
     form {
         display: flex;
         justify-content: space-between;
-        @media (max-width:768px) { 
+        @media (max-width:668px) { 
             flex-wrap: wrap;
         }
         input {
@@ -905,7 +955,7 @@ label.j-checkbox {
             border:none;
             font-size: 18px;
             line-height: 22px;
-            @media (max-width:768px) { 
+            @media (max-width:668px) { 
                 width: 100%;
                 margin-bottom: 20px;
             }
@@ -925,26 +975,37 @@ label.j-checkbox {
                     z-index: 2;
                 }
              }
-            
+             @media (max-width:360px) { 
+                padding-right: 30px;
+                span {
+                    position: relative;
+                    z-index: 2;
+                }
+             }
         }
     }
     .section-5__form__btn {
         position: relative;
         width: 48%;
-        @media (max-width:768px) { 
+        @media (max-width:668px) { 
             width: 100%;
          }
         img {
             position: absolute;
             right: 20px;
             top: -35px;
+            @media (max-width:360px) {
+                right: -10px;
+                top: -25px;
+                width: 130px;
+            }
         }
     }
 }
 
 .section-6 {
     padding: 62px;
-    @media (max-width:768px) { 
+    @media (max-width:668px) { 
         padding: 30px 0px;
      }
     .logos__list {
@@ -985,6 +1046,9 @@ label.j-checkbox {
         justify-content: center;
         align-items: center;
         @media (max-width:768px) { 
+            width: 25%;
+         }
+        @media (max-width:468px) { 
             width: 50%;
          }
         img {
@@ -1014,7 +1078,7 @@ label.j-checkbox {
     }
     &__list {
         margin-top: 54px;
-        @media (max-width:768px) { 
+        @media (max-width:668px) { 
             justify-content: center;
             margin-top: 40px;
          }
@@ -1028,7 +1092,12 @@ label.j-checkbox {
         margin-bottom: 60px;
         position: relative;
         z-index: 2;
-        @media (max-width:768px) { 
+        @media (max-width:868px) { 
+            width: 48%;
+            // max-width: 320px;
+            margin: 24px 0px;
+         }
+        @media (max-width:668px) { 
             width: 100%;
             max-width: 320px;
             margin: 24px 0px;
@@ -1131,10 +1200,15 @@ label.j-checkbox {
         line-height: 22px;
         margin-top: 10px;
     }
+    @media (max-width:368px) { 
+        br {
+            display: none;
+        }
+    }
 }
 .section-9 {
     padding: 54px 0px;
-    @media (max-width:768px) {
+    @media (max-width:668px) {
         padding: 20px 0px 30px 0px;
     }
     .title {
@@ -1175,7 +1249,7 @@ label.j-checkbox {
 .section-10 {
     background: url(../img/section-10/bg.png) no-repeat 0% 100% #393C47;
     padding: 65px 0px;
-    @media (max-width:768px) {
+    @media (max-width:668px) {
         padding: 30px 0px;
      }
     .title {
@@ -1199,12 +1273,18 @@ label.j-checkbox {
 
 .contacts__list {
     margin-top: 26px;
-    @media (max-width:768px) {
+    @media (max-width:968px) {
+        flex-wrap: wrap;
+     }
+    @media (max-width:668px) {
         display: block;
         margin-top: 21px;
      }
      .contacts__item {
-        @media (max-width:768px) {
+        @media (max-width:968px) {
+            width: 48%;
+        }
+        @media (max-width:668px) {
             padding-bottom: 10px;
             position: relative;
             margin-bottom: 10px;
@@ -1251,7 +1331,10 @@ label.j-checkbox {
     border: 4px solid #FFFFFF;
     border-radius: 5px;
     margin-top: 80px;
-    @media (max-width:768px) { 
+    @media (max-width:968px) {
+        margin-top: 40px;
+     }
+    @media (max-width:668px) { 
         margin-top: 30px;
         flex-wrap: wrap;
     }
@@ -1259,15 +1342,23 @@ label.j-checkbox {
 .contacts__map {
     width: 60%;
     height: 500px;
-    @media (max-width:768px) { 
+    @media (max-width:968px) { 
+        width: 50%;
+    }
+    @media (max-width:668px) { 
         width: 100%;
         height: 400px;
      }
 }
 .contacts__form {
     padding: 50px 40px;
-    @media (max-width:768px) { 
+    @media (max-width:968px) { 
+        width: 50%;
+        padding: 30px 20px;
+    }
+    @media (max-width:668px) { 
         padding: 25px 15px;
+        width: 100%;
      }
     .title {
         font-size: 24px;
@@ -1437,10 +1528,14 @@ label.j-checkbox {
     // padding-top: 80px;
     left: -100%;
     transition: all .2s;
+    @media (max-width:768px) {
+        width: 100%;
+    }
     .logo-white {
         display: none;
         @media (max-width:768px) {
             display: block;
+            margin: 11px 15px;
         }
     }
     &.open {
@@ -1472,6 +1567,14 @@ label.j-checkbox {
         right: 25px;
         cursor: pointer;
         z-index: 1;
+        @media (max-width:768px) {
+            height: 68px;
+            width: 68px;
+            top: 0px;
+            right: 0px;
+            background: #EAF9FF;
+           padding: 20px;
+        }
         span {
             display: block;
             position: absolute;
@@ -1484,6 +1587,9 @@ label.j-checkbox {
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
             height: 2px;
+            @media (max-width:768px) {
+                background-color: #F75D25;
+            }
             &:after, &:before {
                 content:"";
                 display: block;
@@ -1494,6 +1600,9 @@ label.j-checkbox {
                 -webkit-transition-duration: .25s;
                 transition-duration: .25s;
                 border-radius: 10px;
+                @media (max-width:768px) {
+                    background-color: #F75D25;
+                }
             }
             &:before {
                 top: 0;
@@ -1515,9 +1624,13 @@ label.j-checkbox {
         padding-bottom: 30px;
         scroll-behavior: smooth;
         position: relative;
+        -webkit-overflow-scrolling: touch
     }
     .second-menu-lvl-1 {
         margin-top: 80px;
+        @media (max-width:768px) {
+            margin-top: 30px;
+        }
         > li {
             > a {
                 font-weight: bold;

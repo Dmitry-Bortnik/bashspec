@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>БашСпецПартнер</title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/css/jquery.fancybox.min.css"/>
     <link rel="stylesheet" href="/css/remodal.css"/>
     <link rel="stylesheet" href="/css/slick.css">
@@ -405,8 +406,8 @@
                     </div>
                 </div>
                 <div class="section-5__form">
-                    <form action="#">
-                        <input type="text" name="phone" placeholder="Введите телефон">
+                    <form id="free-form">
+                        <input type="text" name="phone" required placeholder="Введите телефон">
                         <div class="section-5__form__btn">
                             <button class="btn"><span>Получить бесплатный образец</span></button>
                             <img src="/img/section-5/jacket.png" alt="">
@@ -538,7 +539,6 @@
                         <source srcset="/img/section-9/img.png" media="(min-width: 768px)">
                         <img src="/img/section-9/img-mob.png" alt="MDN">
                     </picture>
-                    <!-- <img src="/img/section-9/img.png" alt=""> -->
                 </div>
                 <div class="section-9__gift">
                     <div class="title">Получите подарок при первом заказе</div>
@@ -574,7 +574,7 @@
                     <div class="contacts__form">
                         <div class="title">Получите персональное <br>коммерческое предложение </div>
                         <p>Оставьте заявку в форме ниже, <br> мы перезвоним в ближайшее время</p>
-                        <form action="#">
+                        <form id="contact-form">
                             <input type="text" name="name" required placeholder="Введите ваше имя">
                             <input type="text" name="phone" required placeholder="Введите телефон">
                             <button class="btn">Оставить заявку</button>
@@ -588,7 +588,7 @@
 
     <footer class="footer">
         <div class="container -flex -justify-between -center -wrap">
-            <a href="#" class="politic" data-fancybox="data-fancybox" data-type="iframe" data-src="/politic.html" href="javascript:;">Политика конфиденциальности</a>
+            <a class="politic" data-fancybox="data-fancybox" data-type="iframe" data-src="/politic.html" href="javascript:;">Политика конфиденциальности</a>
             <a class="fiji-logo-href" target="_blank" href="https://fijiweb.ru/">
                 <img src="/img/fiji.svg" alt="Сайт разработан FijiWeb">
             </a>
