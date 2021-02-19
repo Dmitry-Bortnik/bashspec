@@ -34,36 +34,73 @@ $('.header__toggler').click(function(){
 })
 
 
-$('.w-gallery__list').slick({
 
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-          arrows:false
-        }
-      },
-      {
-        breakpoint: 680,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 430,
-        settings: {
-          slidesToShow: 1.2,
-          infinite: false,
-          slidesToScroll: 1
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
+
+  function windowSize(){
+    if ($(window).width() <= '768'){
+  
+      $('.w-gallery__list').slick({
+        slidesToShow: 4,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false,
+                arrows:false
+              }
+            },
+            {
+              breakpoint: 680,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 430,
+              settings: {
+                slidesToShow: 1.2,
+                infinite: false,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+
+        $('.serts').slick({
+          slidesToShow: 4,
+            responsive: [
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true,
+                  dots: false,
+                  arrows:false
+                }
+              },
+              {
+                breakpoint: 680,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 430,
+                settings: {
+                  slidesToShow: 1.2,
+                  infinite: false,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
+    } 
+}
+
+$(window).on('load resize',windowSize);

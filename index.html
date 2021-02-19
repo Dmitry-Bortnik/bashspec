@@ -42,6 +42,9 @@
 
         <div class="second-menu">
             <div class="second-menu-scroll">
+                <div class="logo-white">
+                    <img src="/img/logo-white.svg" alt="БашСпецПартнер">
+                </div>
                 <div class="second-menu-close">
                     <span></span>
                 </div>
@@ -307,7 +310,7 @@
                 <div class="w-gallery">
                     <h3>Институт реакторных материалов </h3>
                     <p>Пошив курток для персонала.</p>
-                    <div class="w-gallery__list -flex">
+                    <div class="w-gallery__list slider -flex">
                         <div class="w-gallery__item">
                             <img src="/img/section-3/gallery-2/1.jpg" alt="">
                         </div>
@@ -405,7 +408,7 @@
                     <form action="#">
                         <input type="text" name="phone" placeholder="Введите телефон">
                         <div class="section-5__form__btn">
-                            <button class="btn">Получить бесплатный образец</button>
+                            <button class="btn"><span>Получить бесплатный образец</span></button>
                             <img src="/img/section-5/jacket.png" alt="">
                         </div>
                     </form>
@@ -505,8 +508,8 @@
         <div class="section-8">
             <div class="container">
                 <div class="title">Вся продукция сертифицирована</div>
-                <div class="serts -flex">
-                    <div class="serts__item">
+                <div class="serts slider -flex">
+                    <div class="serts__item ">
                         <a href="/img/section-8/sert-big.jpg" data-fancybox> <img src="/img/section-8/sert.jpg" alt=""></a>
                         <p>Сертификат на пошив одноразовых комбинезонов</p>
                     </div>
@@ -531,7 +534,11 @@
                 <div class="title">Бесплатная доставка по всей России</div>
                 <div class="sub-title">Доставляем продукцию точно в срок <br>независимо от объема заказа</div>
                 <div class="section-9__img">
-                    <img src="/img/section-9/img.png" alt="">
+                    <picture>
+                        <source srcset="/img/section-9/img.png" media="(min-width: 768px)">
+                        <img src="/img/section-9/img-mob.png" alt="MDN">
+                    </picture>
+                    <!-- <img src="/img/section-9/img.png" alt=""> -->
                 </div>
                 <div class="section-9__gift">
                     <div class="title">Получите подарок при первом заказе</div>
@@ -565,7 +572,7 @@
                 </div>
                 <div class="contacts__content -flex -justify-between">
                     <div class="contacts__form">
-                        <div class="title">Получите персональное<br>коммерческое предложение </div>
+                        <div class="title">Получите персональное <br>коммерческое предложение </div>
                         <p>Оставьте заявку в форме ниже, <br> мы перезвоним в ближайшее время</p>
                         <form action="#">
                             <input type="text" name="name" required placeholder="Введите ваше имя">

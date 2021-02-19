@@ -685,6 +685,7 @@ label.j-checkbox {
     padding: 72px 0px;
     @media (max-width:768px) {
         padding: 30px 0px;
+        background: url(../img/section-5/bg.png) no-repeat 50% 100% #393C47;
     }
     .container {
         position: relative;
@@ -818,6 +819,13 @@ label.j-checkbox {
             }
         }
     }
+    @media (max-width:768px) {
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
     &::after {
         content: '';
         background: url(../img/section-5/border.svg) repeat-y;
@@ -827,6 +835,14 @@ label.j-checkbox {
         position: absolute;
         top: 35px;
         left: 70px;
+        @media (max-width:768px) {
+            background: none;
+            width: 1px;
+            height: calc(100% - 25px);
+            top: 65px;
+            left: 37px;
+            border-left: 1px dashed #fff;
+        }
     }
     p {
         margin-top: 15px;
@@ -871,10 +887,15 @@ label.j-checkbox {
     border-radius: 5px;
     padding: 69px 76px;
     margin-top: 32px;
-
+    @media (max-width:768px) {
+        padding: 27px 10px;
+    }
     form {
         display: flex;
         justify-content: space-between;
+        @media (max-width:768px) { 
+            flex-wrap: wrap;
+        }
         input {
             background: #EAF9FF;
             border-radius: 100px;
@@ -884,6 +905,10 @@ label.j-checkbox {
             border:none;
             font-size: 18px;
             line-height: 22px;
+            @media (max-width:768px) { 
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
         .btn {
             width: 100%;
@@ -893,11 +918,22 @@ label.j-checkbox {
             line-height: 22px;
             padding-left: 35px;
             text-align: left;
+            @media (max-width:768px) { 
+                padding-right: 100px;
+                span {
+                    position: relative;
+                    z-index: 2;
+                }
+             }
+            
         }
     }
     .section-5__form__btn {
         position: relative;
         width: 48%;
+        @media (max-width:768px) { 
+            width: 100%;
+         }
         img {
             position: absolute;
             right: 20px;
@@ -908,9 +944,15 @@ label.j-checkbox {
 
 .section-6 {
     padding: 62px;
+    @media (max-width:768px) { 
+        padding: 30px 0px;
+     }
     .logos__list {
         margin-top: 50px;
         position: relative;
+        @media (max-width:768px) { 
+            margin-top: 39px;  
+        }
         &::after {
             content: '';
             width: 2px;
@@ -942,6 +984,9 @@ label.j-checkbox {
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (max-width:768px) { 
+            width: 50%;
+         }
         img {
             max-width: 80%;
             display: block;
@@ -951,8 +996,28 @@ label.j-checkbox {
 
 .section-7 {
     padding: 20px 0px 38px 0px;
+    .container {
+        @media (max-width:768px) { 
+            position: relative;
+            &::after {
+                content: '';
+                background: rgba(87, 174, 255, 0.2);
+                filter: blur(250px);
+                position: absolute;
+                bottom: 0px;
+                right: -50px;
+                width: 304px;
+                height: 304px;
+                display: block;
+            }
+        }
+    }
     &__list {
         margin-top: 54px;
+        @media (max-width:768px) { 
+            justify-content: center;
+            margin-top: 40px;
+         }
     }
     &__item {
         width: 30%;
@@ -962,6 +1027,12 @@ label.j-checkbox {
         border-radius: 5px;
         margin-bottom: 60px;
         position: relative;
+        z-index: 2;
+        @media (max-width:768px) { 
+            width: 100%;
+            max-width: 320px;
+            margin: 24px 0px;
+         }
         &:after {
             content: '';
             width: 100%;
@@ -987,6 +1058,9 @@ label.j-checkbox {
         color: #F75D25;
         padding: 15px 26px 0px 26px;
         margin-bottom: 22px;
+        @media (max-width:768px) { 
+            padding: 15px 15px 0px 15px;
+         }
     }
     p {
         font-weight: bold;
@@ -997,14 +1071,29 @@ label.j-checkbox {
         margin-bottom: 60px;
         padding-left: 26px;
         padding-right: 26px;
+        @media (max-width:768px) { 
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 35px;
+        }
     }
 }
 
 .section-8 {
     padding: 0px 0px 50px 0px;
+    @media (max-width:768px) {
+        padding: 0px 0px 20px 0px; 
+     }
 }
 .serts {
     margin-top: 47px;
+    @media (max-width:768px) {
+        margin-top: 20px;
+        width: calc(100% + 30px);
+        margin-left: -15px;
+    }
     &__item {
         width: 24%;
         margin-right: 2%;
@@ -1037,9 +1126,17 @@ label.j-checkbox {
     line-height: 29px;
     margin-top: 19px;
     color: #393C47;
+    @media (max-width:768px) { 
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 10px;
+    }
 }
 .section-9 {
     padding: 54px 0px;
+    @media (max-width:768px) {
+        padding: 20px 0px 30px 0px;
+    }
     .title {
         max-width: none;
     }
@@ -1051,6 +1148,11 @@ label.j-checkbox {
         padding: 74px 68px;
         margin-top: -45px;
         position: relative;
+        @media (max-width:768px) {
+            margin-top: -14px;
+            height: 350px;
+            padding: 15px;
+        }
         &:before {
             content: '';
             width: 100%;
@@ -1064,13 +1166,18 @@ label.j-checkbox {
     }
     &__img {
         margin-top: -50px;
+        @media (max-width:768px) {
+            margin: 10px -15px;
+        }
     }
 }
 
 .section-10 {
     background: url(../img/section-10/bg.png) no-repeat 0% 100% #393C47;
     padding: 65px 0px;
-    
+    @media (max-width:768px) {
+        padding: 30px 0px;
+     }
     .title {
         color:#fff;
     }
@@ -1100,7 +1207,7 @@ label.j-checkbox {
         @media (max-width:768px) {
             padding-bottom: 10px;
             position: relative;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             &:last-child {
                 margin-bottom: 0px;
                 padding-bottom: 0px;
@@ -1108,16 +1215,16 @@ label.j-checkbox {
                     display: none;
                 }
             }
-            &::after {
-                content: '';
-                background: #345BA6;
-                width: 46px;
-                height: 1px;
-                left: 0px;
-                bottom: 0px;
-                display: block;
-                position: absolute;
-            }
+            // &::after {
+            //     content: '';
+            //     background: #345BA6;
+            //     width: 46px;
+            //     height: 1px;
+            //     left: 0px;
+            //     bottom: 0px;
+            //     display: block;
+            //     position: absolute;
+            // }
         }  
      }
     span {
@@ -1136,18 +1243,32 @@ label.j-checkbox {
     background: #32BEFF;
     height: 46px;
     width: 1px;
+    @media (max-width:768px) {
+        display: none;
+    }
 }
 .contacts__content {
     border: 4px solid #FFFFFF;
     border-radius: 5px;
     margin-top: 80px;
+    @media (max-width:768px) { 
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
 }
 .contacts__map {
     width: 60%;
     height: 500px;
+    @media (max-width:768px) { 
+        width: 100%;
+        height: 400px;
+     }
 }
 .contacts__form {
     padding: 50px 40px;
+    @media (max-width:768px) { 
+        padding: 25px 15px;
+     }
     .title {
         font-size: 24px;
         line-height: 29px;
@@ -1204,7 +1325,11 @@ label.j-checkbox {
         border-bottom: 1px solid;
     }
 }
-
+.fancybox-slide {
+    @media (max-width:768px) {
+        padding: 20px;
+    }
+}
 .fancybox-content {
     max-width: 700px;
     font-family: 'Montserrat', sans-serif;
@@ -1312,6 +1437,12 @@ label.j-checkbox {
     // padding-top: 80px;
     left: -100%;
     transition: all .2s;
+    .logo-white {
+        display: none;
+        @media (max-width:768px) {
+            display: block;
+        }
+    }
     &.open {
         left: 0px;
     }
