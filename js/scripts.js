@@ -1,5 +1,6 @@
-$('[type="checkbox"]').on('click', function() {
+$('[type="radio"]').on('click', function() {
     var $this = $(this);
+    $($this).parent().siblings('label').removeClass('active');
     $($this).closest('label').toggleClass('active');
 
 });
@@ -137,4 +138,28 @@ $(document).ready(function () {
         });
         return false;
       });
+      $("#kwiz").submit(function () {
+        $("#kwiz button").prop("disabled", true).css({
+          "background-color": "#b6b6b6",
+          "color": "#FFF"
+        }).text("Ждите...");
+        $.ajax({
+          type: "POST",
+          url: "/send-kwiz.php",
+          data: $(this).serialize()
+        }).done(function () {
+          // yaCounter53745795.reachGoal('ORDER2');
+          $('#kwiz').html("<div style='font-size:24px;  margin-top:10px; color:#000;'>Спасибо!<br> Мы свяжемся с вами для просчёта в течении 15 минут");
+        });
+        return false;
+      });
 })
+
+var i = 0;
+$('.btn.btn-kwiz-next').on('click', function() {
+  i++;
+    $('.kwiz-step.active').removeClass('active').next().addClass('active');
+    if (i == 4) {
+      $('.btn.btn-kwiz-next.btn-step-1').hide();
+    }
+});

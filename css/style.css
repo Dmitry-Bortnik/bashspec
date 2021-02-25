@@ -421,6 +421,8 @@ nav ul li a.active, nav ul li a:hover {
 
 @media (max-width: 668px) {
   .section-2 {
+    background: url(/img/section-2/bg.png) no-repeat center 40% #393C47;
+    background-size: 130%;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -430,18 +432,20 @@ nav ul li a.active, nav ul li a:hover {
   position: relative;
 }
 
-.section-2 .container:after {
-  content: '';
-  background: rgba(247, 93, 37, 0.5);
-  -webkit-filter: blur(250px);
-          filter: blur(250px);
-  filter: blur(250px);
-  position: absolute;
-  bottom: 322px;
-  right: 0px;
-  width: 342px;
-  height: 342px;
-  display: block;
+@media (min-width: 668px) {
+  .section-2 .container:after {
+    content: '';
+    background: rgba(247, 93, 37, 0.5);
+    -webkit-filter: blur(250px);
+            filter: blur(250px);
+    filter: blur(250px);
+    position: absolute;
+    bottom: 322px;
+    right: 0px;
+    width: 342px;
+    height: 342px;
+    display: block;
+  }
 }
 
 .section-2__list {
@@ -610,12 +614,34 @@ nav ul li a.active, nav ul li a:hover {
   }
 }
 
+.kwiz-form {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
 .kwiz form {
   margin-top: 42px;
   border: 4px solid #FFFFFF;
   border-radius: 5px;
   padding: 41px 43px;
   color: #393C47;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.kwiz form input[type='text'] {
+  height: 56px;
+  width: 297px;
+  border-radius: 50px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.kwiz form .btn {
+  border: none;
 }
 
 @media (max-width: 768px) {
@@ -1665,6 +1691,20 @@ label.j-checkbox:before {
   }
 }
 
+.kwiz-step {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  height: 0px;
+}
+
+.kwiz-step.active {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
 .section-10 {
   background: url(../img/section-10/bg.png) no-repeat 0% 100% #393C47;
   padding: 65px 0px;
@@ -1672,6 +1712,7 @@ label.j-checkbox:before {
 
 @media (max-width: 668px) {
   .section-10 {
+    background: url(../img/section-10/bg.png) no-repeat 100% 50% #393C47;
     padding: 30px 0px;
   }
 }
@@ -1733,6 +1774,12 @@ label.j-checkbox:before {
   }
   .contacts__list .contacts__item:last-child:after {
     display: none;
+  }
+}
+
+@media (max-width: 468px) {
+  .contacts__list .contacts__item {
+    width: 100%;
   }
 }
 

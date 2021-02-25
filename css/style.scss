@@ -312,12 +312,15 @@ nav {
         color:#fff;
     }
     @media (max-width:668px) {
+        background: url(/img/section-2/bg.png) no-repeat center 40% #393C47;
+        background-size: 130%;
         padding-top: 30px;
         padding-bottom: 30px;
        
     }
     .container {
         position: relative;
+        @media (min-width:668px) {
         &:after {
             content: '';
             background: rgba(247, 93, 37, 0.5);
@@ -326,9 +329,10 @@ nav {
             position: absolute;
             bottom: 322px;
             right: 0px;
-            width: 342px;
+            width: 342px; 
             height: 342px;
              display: block;
+        }
         }
     }
     &__list {
@@ -448,12 +452,29 @@ nav {
             line-height: 29px;
         }
     }
+    &-form {
+        transition: all .2s;
+    }
     form {
         margin-top: 42px;
         border: 4px solid #FFFFFF;
         border-radius: 5px;
         padding: 41px 43px;
         color: #393C47;
+        transition: all .2s;
+        input[type='text'] {
+            height: 56px;
+            width: 297px;
+            border-radius: 50px;
+            border: none;
+            padding: 0px 20px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .btn {
+            border: none;
+        }
         @media (max-width:768px) {
             padding: 30px 15px;
         }
@@ -1245,11 +1266,22 @@ label.j-checkbox {
         }
     }
 }
-
+.kwiz-step {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .1s;
+    height: 0px;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+    }
+}
 .section-10 {
     background: url(../img/section-10/bg.png) no-repeat 0% 100% #393C47;
     padding: 65px 0px;
     @media (max-width:668px) {
+        background: url(../img/section-10/bg.png) no-repeat 100% 50% #393C47;
         padding: 30px 0px;
      }
     .title {
@@ -1295,17 +1327,10 @@ label.j-checkbox {
                     display: none;
                 }
             }
-            // &::after {
-            //     content: '';
-            //     background: #345BA6;
-            //     width: 46px;
-            //     height: 1px;
-            //     left: 0px;
-            //     bottom: 0px;
-            //     display: block;
-            //     position: absolute;
-            // }
         }  
+        @media (max-width:468px) {
+            width: 100%;
+        }
      }
     span {
         font-weight: bold;
