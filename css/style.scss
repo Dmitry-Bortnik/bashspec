@@ -464,7 +464,8 @@ nav {
         transition: all .2s;
         input[type='text'] {
             height: 56px;
-            width: 297px;
+            max-width: 297px;
+            width: 100%;
             border-radius: 50px;
             border: none;
             padding: 0px 20px;
