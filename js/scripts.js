@@ -149,7 +149,7 @@ $(document).ready(function () {
           data: $(this).serialize()
         }).done(function () {
           // yaCounter53745795.reachGoal('ORDER2');
-          $('#kwiz').html("<div style='font-size:24px;  margin-top:10px; color:#000;'>Спасибо!<br> Мы свяжемся с вами для просчёта в течении 15 минут");
+          $('#kwiz').html("<div style='font-size:24px;  margin-top:50px; color:#000; padding-right:40%'>Спасибо!<br> Мы свяжемся с вами <br>для просчёта в течении 15 минут");
         });
         return false;
       });
