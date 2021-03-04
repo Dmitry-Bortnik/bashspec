@@ -7,7 +7,9 @@
                         <title>'.$subject.'</title>
                     </head>
                     <body>
+                        <p><b>Имя:</b> '.$_POST['name'].'</p> 
                         <p><b>Телефон:</b> '.$_POST['phone'].'</p> 
+                        <p>'.$_POST['message'].'</p> 
                     </body>
                 </html>'; //Текст нащего сообщения можно использовать HTML теги
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма

@@ -106,7 +106,34 @@ $(function () {
 
 $(window).on('load resize',windowSize);
 
-
+$(document).ready(function () {
+$('.product__more__slider-big').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.product__more__slider-small',
+  responsive: [
+    {
+      breakpoint: 760,
+      settings: {
+        slidesToShow: 1.2,
+        slidesToScroll: 1,
+        infinite:false,
+        fade: false,
+        dots:true
+      }
+    }
+  ]
+});
+$('.product__more__slider-small').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.product__more__slider-big',
+  dots: false,
+  focusOnSelect: true
+});
+})
 $(document).ready(function () {
     $("#free-form").submit(function () {
       $("#free-form button").prop("disabled", true).css({
@@ -120,6 +147,21 @@ $(document).ready(function () {
       }).done(function () {
         // yaCounter53745795.reachGoal('ORDER2');
         $('#free-form').html("<div style='font-size:24px; text-align:center; width: 100%; color:#000;'>Спасибо! Мы свяжемся с вами для вручения бесплатного образца");
+      });
+      return false;
+    });
+    $("#form-director").submit(function () {
+      $("#form-director button").prop("disabled", true).css({
+        "background-color": "#b6b6b6",
+        "color": "#FFF"
+      }).text("Ждите...");
+      $.ajax({
+        type: "POST",
+        url: "/send.php",
+        data: $(this).serialize()
+      }).done(function () {
+        // yaCounter53745795.reachGoal('ORDER2');
+        $('#form-director_c').html("<div style='font-size:24px; text-align:center; width: 100%; color:#000;'>Спасибо! Мы свяжемся с вами для вручения бесплатного образца");
       });
       return false;
     });
