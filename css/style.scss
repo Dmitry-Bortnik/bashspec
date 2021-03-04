@@ -306,7 +306,46 @@ nav {
         
     }
 }
-
+.individual {
+    background: #393C47;
+    padding: 80px 0px;
+    @media (max-width:760px) {
+        padding: 30px 0px;
+    }
+    .section-2__list {
+        border-bottom:0px;
+        margin-bottom: 0px;
+    }
+    .container {
+        position: relative;
+        @media (min-width:668px) {
+            &:after {
+                content: '';
+                background: rgba(247, 93, 37, 0.5);
+                filter: blur(250px);
+                position: absolute;
+                top: 92px;
+                right: -50px;
+                width: 279px;
+                height: 279px;
+                bottom: auto;
+                display: block;
+            }
+            &:before {
+                content: '';
+                background: rgba(87, 174, 255, 0.4);
+                filter: blur(250px);
+                position: absolute;
+                top: 450px;
+                left: -50px;
+                width: 279px;
+                height: 279px;
+                bottom: auto;
+                display: block;
+            }
+        }
+    }
+}
 .section-2 {
     background: url(/img/section-2/bg.png) no-repeat 100% 95px #393C47;
     padding-top: 80px;
@@ -315,42 +354,9 @@ nav {
     &.individual {
         padding-bottom: 2px;
         background: url(/img/section-2/bg.png) no-repeat 120% 100% #393C47;
-        @media (max-width:760px) {
-            background: url(/img/section-2/bg.png) no-repeat 50% 100% #393C47;
-            background-size: 150%;
-        }
-        .section-2__list {
-            border-bottom:0px;
-            margin-bottom: 0px;
-        }
-        .container {
-            position: relative;
-            @media (min-width:668px) {
-                &:after {
-                    content: '';
-                    background: rgba(247, 93, 37, 0.5);
-                    filter: blur(250px);
-                    position: absolute;
-                    top: 92px;
-                    right: -50px;
-                    width: 279px;
-                    height: 279px;
-                    bottom: auto;
-                    display: block;
-                }
-                &:before {
-                    content: '';
-                    background: rgba(87, 174, 255, 0.4);
-                    filter: blur(250px);
-                    position: absolute;
-                    top: 450px;
-                    left: -50px;
-                    width: 279px;
-                    height: 279px;
-                    bottom: auto;
-                    display: block;
-                }
-            }
+        @media (max-width:960px) {
+            margin-top: -2px;
+            padding-top: 50px;
         }
     }
     .title {
@@ -1225,7 +1231,7 @@ label.j-checkbox {
 .section-8 {
     margin: 20px 0px 60px 0px;
     @media (max-width:768px) {
-        margin: 10px 0px 20px 0px; 
+        margin: 10px 0px 40px 0px; 
      }
 }
 .serts {
@@ -1238,6 +1244,8 @@ label.j-checkbox {
     &__item {
         width: 24%;
         margin-right: 2%;
+        position: relative;
+        z-index: 2;
         &:last-child {
             margin-right: 0px;
         }
@@ -1967,6 +1975,7 @@ select {
     -webkit-appearance: none;
     border:none;
     appearance: none;
+    cursor: pointer;
 }
 
 .catalog__list {
@@ -2040,13 +2049,14 @@ select {
     border-radius: 5px;
     padding: 53px;
     position: relative;
-    margin-bottom: 134px;
+    // margin-bottom: 134px;
+    z-index: 2;
     @media (min-width:761px) {
         min-height: 530px;
     }
     @media (max-width:760px) {
-        padding: 27px 15px 330px 15px;
-        margin-bottom: 45px;
+        padding: 27px 15px 305px 15px;
+        // margin-bottom: 20px;
     }
     &:after {
         content:"";
@@ -2058,7 +2068,7 @@ select {
         left: 0px;
         display: block;
         @media (max-width:760px) {
-            bottom: -20px;
+            bottom: -30px;
         }
     }
     .title {
@@ -2083,7 +2093,7 @@ select {
             font-weight: 500;
             font-size: 18px;
             line-height: 22px;
-            margin: 5px 0px 10px 0px;
+            margin: 10px 0px 15px 0px;
             br {
                 display: none;
             }
@@ -2305,7 +2315,13 @@ select {
         }
     }
 }
-
+.about-wrapper {
+    .individual {
+        .individual-offer:after {
+            display: none;
+        }
+    }
+}
 .about-page {
     color:#fff;
     background: url(../img/mask-about.png) no-repeat center bottom #393C47;

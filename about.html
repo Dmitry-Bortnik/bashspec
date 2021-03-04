@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper about-wrapper">
         <header class="header">
             <div class="container">
                 <div class="-flex -justify-between">
@@ -353,45 +353,25 @@
             </div>
         </div>
 
-        <div class="section-10">
+        <div class="individual">
             <div class="container">
-                <div class="title">Контакты</div>
-                <div class="contacts__list -flex -justify-between">
-                    <div class="contacts__item">
-                        <span>Телефон для связи</span>
-                        <div>8 (347) 222-22-22</div>
+                <div class="individual-offer">
+                    <div class="title">Получите индивидуальное <br>
+                        предложение на пошив одежды</div>
+                    <p>Оставьте данные в форме ниже, <br>
+                        мы перезвоним в ближайшее время</p>
+                    <form id="individual-offer">
+                        <input type="text" name="name" required placeholder="Введите имя">
+                        <input type="text" name="phone" required placeholder="Введите телефон">
+                        <button type="submit" class="btn btn-kwiz-next">Оставить заявку</button>
+                    </form>
+                    <div class="individual-offer__manager">
+                        <img src="/img/irina.png" alt="">
+                        <p>Ирина, <br> менеджер</p>
                     </div>
-                    <div class="contacts__razd"></div>
-                    <div class="contacts__item">
-                        <span>Email</span>
-                        <div>mail@bashspec.ru</div>
-                    </div>
-                    <div class="contacts__razd"></div>
-                    <div class="contacts__item">
-                        <span>Адрес</span>
-                        <div>г. Уфа, ул. Комсомольская, д. 25</div>
-                    </div>
-                    <div class="contacts__razd"></div>
-                    <div class="contacts__item">
-                        <span>График работы</span>
-                        <div>ПН-ПТ с 9:00 до 18:00</div>
-                    </div>
-                </div>
-                <div class="contacts__content -flex -justify-between">
-                    <div class="contacts__form">
-                        <div class="title">Получите персональное <br>коммерческое предложение </div>
-                        <p>Оставьте заявку в форме ниже, <br> мы перезвоним в ближайшее время</p>
-                        <form id="contact-form">
-                            <input type="text" name="name" required placeholder="Введите ваше имя">
-                            <input type="text" name="phone" required placeholder="Введите телефон">
-                            <button class="btn">Оставить заявку</button>
-                        </form>
-                    </div>
-                    <div class="contacts__map" id="map"></div>
                 </div>
             </div>
         </div>
-    </div>
 
     <footer class="footer">
         <div class="container -flex -justify-between -center -wrap">
