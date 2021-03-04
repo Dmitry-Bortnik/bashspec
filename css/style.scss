@@ -1071,9 +1071,9 @@ label.j-checkbox {
 }
 
 .section-6 {
-    padding: 62px;
+    margin: 62px 0px;
     @media (max-width:668px) { 
-        padding: 30px 0px;
+        margin: 30px 0px;
      }
     .logos__list {
         margin-top: 50px;
@@ -1126,7 +1126,7 @@ label.j-checkbox {
 }
 
 .section-7 {
-    padding: 20px 0px 38px 0px;
+    margin: 20px 0px 38px 0px;
     .container {
         @media (max-width:768px) { 
             position: relative;
@@ -1159,6 +1159,11 @@ label.j-checkbox {
         margin-bottom: 60px;
         position: relative;
         z-index: 2;
+        // @media (min-width:868px) {
+        //     &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+        //         margin-bottom: 0px;
+        //     }
+        // }
         @media (max-width:868px) { 
             width: 48%;
             // max-width: 320px;
@@ -1218,9 +1223,9 @@ label.j-checkbox {
 }
 
 .section-8 {
-    padding: 0px 0px 60px 0px;
+    margin: 20px 0px 60px 0px;
     @media (max-width:768px) {
-        padding: 0px 0px 20px 0px; 
+        margin: 10px 0px 20px 0px; 
      }
 }
 .serts {
@@ -1324,11 +1329,14 @@ label.j-checkbox {
     }
 }
 .section-10 {
-    background: url(../img/section-10/bg.png) no-repeat 0% 100% #393C47;
+    background: url(../img/section-10/bg.png) no-repeat -30% 100% #393C47;
     padding: 65px 0px;
     &.white-bg {
         background: #fff;
         padding-top: 50px;
+        @media (max-width:668px) {
+            padding-top: 30px;
+        }
         .contacts__content {
             margin-top: 60px;
             @media (max-width:668px) {
@@ -1624,11 +1632,14 @@ label.j-checkbox {
     color:#fff;
     background: #393C47;
     min-height: 100vh;
-    box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.5);
+    
     z-index: 9;
     // padding-top: 80px;
     left: -100%;
     transition: all .2s;
+    @media (min-width:769px) {
+        box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.5);
+    }
     @media (max-width:768px) {
         width: 100%;
     }
@@ -2207,12 +2218,13 @@ select {
     }
     .slick-slide {
         margin: 0px 4px;
-        border: 1px solid #fff;
+        border: 1px solid #EAF9FF;
+        border-radius: 5px;
+        overflow: hidden;
     }
     .slick-slide.slick-current.slick-active {
         border: 1px solid #57AEFF;
-        border-radius: 5px;
-        overflow: hidden;
+        
     }
     img {
         
@@ -2307,7 +2319,7 @@ select {
             padding-bottom: 150px;
         }
         @media (max-width:760px) {
-            padding-bottom: 330px;
+            padding-bottom: 300px;
         }
     }
     &__text {
@@ -2318,6 +2330,15 @@ select {
         .btn {
             margin-top: 40px;
             padding: 22px 50px;
+            @media (max-width:760px) {
+                padding: 22px 60px;
+                position: absolute;
+                bottom: -20px;
+                z-index: 2;
+                max-width: 300px;
+                left: 50%;
+                margin-left: -140px;
+            }
         }
     }
     .title {
@@ -2331,7 +2352,11 @@ select {
         @media (max-width:960px) {
             img {
                 height: 444px;
+                max-width: none;
             }
+        }
+        @media (max-width:760px) {
+            right: 0px;
         }
         p {
             position: absolute;
@@ -2340,6 +2365,9 @@ select {
             font-size: 14px;
             line-height: 17px;
             color: #FFFFFF;
+            @media (max-width:760px) {
+                display: none;
+            }
             span {
                  font-weight: bold;
                  display: block;
@@ -2375,9 +2403,41 @@ select {
 
 
 .map-partners {
-    background: url(../img/map-partner.png) no-repeat 140% 20% #393C47;
+    background: url(../img/map-partner.png) no-repeat 100% 20% #393C47;
     color:#fff;
     padding: 80px 0px;
+    @media (min-width:761px) {
+        .container {
+            position: relative;
+            &:after {
+                content:"";
+                width: 279px;
+                height: 279px;
+                background: rgba(247, 93, 37, 0.5);
+                filter: blur(150px);
+                position: absolute;
+                display: block;
+                bottom: 200px;
+                right:-40px;
+                z-index: 0;
+            }
+            &:before {
+                content:"";
+                width: 279px;
+                height: 279px;
+                background: rgba(87, 174, 255, 0.4);
+                filter: blur(150px);
+                position: absolute;
+                display: block;
+                bottom: 20px;
+                left:-40px;
+                z-index: 0;
+            }
+        }
+    }
+    @media (max-width:760px) {
+        padding: 35px 0px;
+    }
     .title {
         margin-bottom: 40px;
         color:#fff;
@@ -2414,6 +2474,9 @@ select {
             line-height: 22px;
             text-align: center;
             margin-top: 30px;
+            @media (max-width:760px) {
+                font-size: 16px;
+            }
         }
     }
 }
@@ -2423,6 +2486,8 @@ select {
     border-radius: 5px;
     padding: 54px;
     margin-top: 53px;
+    position: relative;
+    z-index: 2;
     @media (max-width:668px) {
         padding: 25px 15px;
     }
